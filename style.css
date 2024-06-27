@@ -1,0 +1,131 @@
+@charset 'UTF-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+   
+}
+@font-face  {
+    font-family: 'fonte';
+    src: url('fonts/BigShouldersDisplay-Regular.ttf');
+}
+:root{
+    /* ## Colors */
+
+/* ### Primary */
+
+--Laranja-brilhante: hsl(31, 77%, 52%);
+--Ciano-escuro: hsl(184, 100%, 22%);
+--Ciano-muito-escuro: hsl(179, 100%, 13%);
+
+/* ### Neutral */
+
+/* (paragraphs) */
+--Branco-transparente: hsla(0, 0%, 100%, 0.75);
+/* (plano de fundo, títulos, botões) */
+--Cinza-bem-claro : hsl(0, 0%, 95%);
+}
+body{
+    font-size: 15px;
+    
+}
+section{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+   
+}
+section h1{
+    font-size: 2.4em;
+    margin: 20px 0px;
+    color: var(--Branco-transparente);
+    font-family: fonte;
+    text-transform: uppercase;
+    
+}
+section article p{
+    color: var(--Branco-transparente);
+    line-height: 22px;
+    font-family: arial;
+}
+section article a{
+    margin-top: 30px;
+    padding: 12px 18px;
+    background: white;
+    display: block;
+    width: 55%;
+    text-align: center;
+    border-radius: 30px;
+    font-family: arial;
+}
+section img{
+    width: 55px;
+}
+section article{
+    width: 300px;
+    padding: 45px;
+    margin: auto;
+}
+article.artigo1{
+    background:var(--Laranja-brilhante) ;
+    border-radius: 10px 10px 0px 0px;
+}
+article.artigo1 a{
+    color: var(--Laranja-brilhante);
+}
+article.artigo2 a{
+    color:var(--Ciano-escuro) ;
+}
+article.artigo3 a{
+    color:var(--Ciano-muito-escuro) ;
+}
+article.artigo2{
+    background:var(--Ciano-escuro) ;
+}
+article.artigo3{
+    background:var(--Ciano-muito-escuro) ;
+    border-radius: 0px 0px 10px 10px;
+}
+@media screen and (min-width:768px){
+    section{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        flex-direction: row;
+    }
+    section article{
+    width: 255px;
+    padding: 30px;
+    
+}
+    section article a{  
+    padding: 12px 20px;
+    width: 75%;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+    article.artigo1{
+    border-radius: 0px;
+}
+    article.artigo1 a:hover{
+        background-color: var(--Laranja-brilhante);
+        color:var(--Branco-transparente) ;
+        border: 1px solid var(--Branco-transparente);
+    }
+    article.artigo2 a:hover{
+        background-color: var(--Ciano-escuro);
+        color:var(--Branco-transparente) ;
+        border: 1px solid var(--Branco-transparente);
+    }
+    article.artigo3 a:hover{
+        background-color:  var(--Ciano-muito-escuro);
+        color:var(--Branco-transparente) ;
+        border: 1px solid var(--Branco-transparente);
+    }
+    article.artigo3{
+    border-radius: 0px;
+}
+}
